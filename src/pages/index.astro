@@ -1,16 +1,54 @@
 ---
-
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Progressive Women's Action Coalition">
+  <p class="center">
+    <img
+      src="/logo.jpg"
+      alt="Progressive Women's Action Coalition"
+      width="256"
+    />
+  </p>
+
+  <h1>Progressive Women's Action Coalition</h1>
+
+  <p>
+    We are a progressive, women-led organization dedicated to providing aid,
+    education, and advocacy in rural northeast Alabama. We are united in our
+    commitment to progress and equity for all, striving to build a stronger,
+    more inclusive future.
+  </p>
+
+  <h2>Links</h2>
+
+  <p>
+    Find us on <a href="https://www.facebook.com/profile.php?id=61572008159461"
+      >Facebook</a
+    >,
+    <a href="https://www.instagram.com/progressive_womens_coalition/"
+      >Instagram</a
+    >,
+    <a href="https://substack.com/@pwac1">Substack</a>, and <a
+      href="https://account.venmo.com/u/PWACAL">Venmo</a
+    >
+  </p>
+
+  <p>
+    You can also email us at <a href="mailto:actionmattersdekalbal@gmail.com"
+      >actionmattersdekalbal@gmail.com</a
+    >
+  </p>
+
+  <h2>Recent Substack Posts</h2>
+
+  <div id="substack-feed-embed"></div>
+  <script>
+    window.SubstackFeedWidget = {
+      substackUrl: "pwac1.substack.com",
+      posts: 3,
+      layout: "right",
+    };
+  </script>
+  <script src="https://substackapi.com/embeds/feed.js" async></script>
+</Layout>
