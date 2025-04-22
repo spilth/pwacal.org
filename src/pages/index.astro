@@ -43,6 +43,11 @@ import Layout from "../layouts/Layout.astro";
   <h2>Recent Substack Posts</h2>
 
   <div id="substack-feed-embed"></div>
+
+  <h2>Recent BlueSky Posts</h2>
+
+  <bsky-embed username="pwacal.bsky.social" limit="3"></bsky-embed>
+
   <script>
     window.SubstackFeedWidget = {
       substackUrl: "pwac1.substack.com",
@@ -50,5 +55,10 @@ import Layout from "../layouts/Layout.astro";
       layout: "right",
     };
   </script>
-  <script src="https://substackapi.com/embeds/feed.js" async></script>
+  <script is:inline src="https://substackapi.com/embeds/feed.js" async></script>
+  <script
+    is:inline
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js"
+    async></script>
 </Layout>
