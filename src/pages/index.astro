@@ -42,20 +42,18 @@ import Layout from "../layouts/Layout.astro";
 
   <h2>Recent Substack Posts</h2>
 
-  <div id="substack-feed-embed"></div>
+  <!-- Feed embed code -->
+  <div data-supascribe-embed-id="922699764771" data-supascribe-feed></div>
+
+  <!-- Supascribe Script -->
+  <script
+    src="https://js.supascribe.com/v1/loader/UWevReQ1O1dTRraBckerdyPYSjJ3.js"
+    async></script>
 
   <h2>Recent BlueSky Posts</h2>
 
   <bsky-embed username="pwacal.bsky.social" limit="3"></bsky-embed>
 
-  <script>
-    window.SubstackFeedWidget = {
-      substackUrl: "pwac1.substack.com",
-      posts: 3,
-      layout: "right",
-    };
-  </script>
-  <script is:inline src="https://substackapi.com/embeds/feed.js" async></script>
   <script
     is:inline
     type="module"
